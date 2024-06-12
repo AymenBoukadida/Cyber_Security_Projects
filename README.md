@@ -31,5 +31,5 @@ Option to send logs to a remote server for centralized monitoring.
 [📄 Detailed README for Keylogger ]([https://katherineoelsner.com/](https://github.com/AymenBoukadida/Prodigy-Infotech-CS-Tasks/blob/main/Task-4-Keylogger/README%20(1).md))
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/aymen-boukadida-869b19256)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aymen-boukadida-869b19256)
 
