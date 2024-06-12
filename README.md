@@ -15,7 +15,7 @@ A secure password vault feature allows users to store passwords safely. Password
 ## 🔑 Master Password & Recovery Key:
 Users create a master password, which derives an encryption key using PBKDF2 with SHA-256. Additionally, a unique recovery key, generated with UUID and hashed with SHA-256, ensures account recovery if the master password is forgotten.
 
-[📄Detailed README for Password Complexity Checker & Vault ](Task-3-Password-ComplexityChecker+Vault/README (1).md)
+[📄Detailed README for Password Complexity Checker & Vault ](https://github.com/AymenBoukadida/Prodigy-Infotech-CS-Tasks/blob/main/Task-3-Password-ComplexityChecker%2BVault/README%20(1).md))
 
 
 # Keylogger
