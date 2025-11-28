@@ -28,6 +28,10 @@ Captures keystrokes in real-time.
 Stores logged data securely.
 Option to send logs to a remote server for centralized monitoring.
 
+#C2 Server
+a lightweight Command & Control (C2) framework developed for ethical cybersecurity training and research.
+The project demonstrates how a remote agent can collect system information, execute remote commands, and communicate with a central control server.
+
 [📄 Detailed README for Keylogger ]([https://katherineoelsner.com/](https://github.com/AymenBoukadida/Prodigy-Infotech-CS-Tasks/blob/main/Task-4-Keylogger/README%20(1).md))
 ## 🔗 Links
 
