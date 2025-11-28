@@ -28,7 +28,7 @@ Captures keystrokes in real-time.
 Stores logged data securely.
 Option to send logs to a remote server for centralized monitoring.
 
-#C2 Server
+# C2 Server
 a lightweight Command & Control (C2) framework developed for ethical cybersecurity training and research.
 The project demonstrates how a remote agent can collect system information, execute remote commands, and communicate with a central control server.
 
